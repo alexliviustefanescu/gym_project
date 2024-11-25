@@ -7,7 +7,7 @@
   sizeCategory: #S,
   dataClass: #MIXED
 }
-define view entity ZGYM_I_MEM
+define root view entity ZGYM_I_MEM
   as select from zgym_mem as Memberships
   association [1..1] to ZGYM_I_USER     as _Users           on $projection.UserId = _Users.Id
   association [1..1] to ZGYM_I_MEM_TYPE as _MembershipTypes on $projection.MembershipId = _MembershipTypes.Id
@@ -15,7 +15,7 @@ define view entity ZGYM_I_MEM
 {
   key user_id          as UserId,
   key membership_id    as MembershipId,
-      start_date       as StartDate,
+  key start_date       as StartDate,
       end_date         as EndDate,
       type             as Type,
       status           as Status,

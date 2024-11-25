@@ -1,0 +1,26 @@
+managed implementation in class zbp_gym_i_class_type unique;
+strict ( 2 );
+
+define behavior for ZGYM_I_CLASS_TYPE //alias <alias_name>
+persistent table zgym_class_type
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Id;
+   mapping for zgym_class_type {
+   Id = id;
+   Name = name;
+   Description = description;
+   Duration = duration;
+   MaxNumber = max_number;
+   Createdby = createdby;
+   Createdat = createdat;
+   Lastchangedby = lastchangedby;
+   Lastchangedat = lastchangedat;
+   Locallastchanged = locallastchanged;
+  }
+}

@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_GYM_I_CHECK_IN'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_GYM_I_CHECK_IN'
+  }
+}
+define service ZUI_GYM_I_CHECK_IN_O4 provider contracts odata_v4_ui {
+  expose ZC_GYM_I_CHECK_IN;
+}

@@ -1,0 +1,9 @@
+@EndUserText.label: 'service definition for subscriber view'
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZGYM_C_SCHEDULE_SUB'
+  }
+}
+define service ZGYM_UI_SUBSCRIBER {
+  expose ZGYM_C_SCHEDULE_SUB;
+}

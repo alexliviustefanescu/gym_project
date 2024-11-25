@@ -1,0 +1,36 @@
+managed implementation in class zbp_gym_i_schedule unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZGYM_I_SCHEDULE alias Schedule
+persistent table zgym_schedule
+draft table zgym_schedule_md
+lock master
+total etag LastChangedAt
+authorization master ( instance )
+etag master LastChangedAt
+{
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+    draft determine action Prepare;
+
+  create;
+  update;
+  delete;
+  field ( readonly ) ClassId, InstructorId, DayOfWeek, StartTime;
+  mapping for zgym_schedule
+    {
+      ClassId          = class_id;
+      InstructorId     = instructor_id;
+      DayOfWeek        = day_of_week;
+      StartTime        = start_time;
+      RoomNumber       = room_number;
+      Createdby        = createdby;
+      Createdat        = createdat;
+      Lastchangedby    = lastchangedby;
+      Lastchangedat    = lastchangedat;
+      Locallastchanged = locallastchanged;
+    }
+}

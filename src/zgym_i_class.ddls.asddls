@@ -7,7 +7,7 @@
   sizeCategory: #S,
   dataClass: #MIXED
 }
-define view entity ZGYM_I_CLASS
+define root view entity ZGYM_I_CLASS
   as select from zgym_class
   association [1..1] to ZGYM_I_USER       as _Instructors on  $projection.InstructorId = _Instructors.Id
                                                           and _Instructors.Role        = 'INS'

@@ -1,0 +1,29 @@
+managed implementation in class zbp_gym_i_check_in unique;
+strict ( 2 );
+
+define behavior for ZGYM_I_CHECK_IN //alias <alias_name>
+persistent table zgym_check_in
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) UserId, CheckIn, CheckDate;
+
+  mapping for zgym_check_in
+    {
+      UserId           = user_id;
+      CheckIn          = check_in;
+      CheckDate        = check_date;
+      CheckOut         = check_out;
+      Location         = location;
+      Room             = room;
+      Createdby        = createdby;
+      Createdat        = createdat;
+      Lastchangedby    = lastchangedby;
+      Lastchangedat    = lastchangedat;
+      Locallastchanged = locallastchanged;
+    }
+}

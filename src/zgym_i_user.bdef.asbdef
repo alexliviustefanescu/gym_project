@@ -1,0 +1,30 @@
+managed implementation in class zbp_gym_i_user unique;
+strict ( 2 );
+
+define behavior for ZGYM_I_USER //alias <alias_name>
+persistent table zgym_user
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Id, Ssn;
+  mapping for zgym_user
+    {
+      Id               = id;
+      Role             = role;
+      Name             = name;
+      Ssn              = ssn;
+      Dob              = dob;
+      Email            = email;
+      PhoneNumber      = phone_number;
+      CountryCode      = country_code;
+      Createdby        = createdby;
+      Createdat        = createdat;
+      Lastchangedby    = lastchangedby;
+      Lastchangedat    = lastchangedat;
+      Locallastchanged = locallastchanged;
+    }
+}

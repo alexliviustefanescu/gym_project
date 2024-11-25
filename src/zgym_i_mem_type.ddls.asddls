@@ -7,7 +7,7 @@
   sizeCategory: #S,
   dataClass: #MIXED
 }
-define view entity ZGYM_I_MEM_TYPE
+define root view entity ZGYM_I_MEM_TYPE
   as select from zgym_mem_type
 {
   key id               as Id,

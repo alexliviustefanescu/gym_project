@@ -1,0 +1,24 @@
+managed implementation in class zbp_gym_i_class unique;
+strict ( 2 );
+
+define behavior for ZGYM_I_CLASS //alias <alias_name>
+persistent table zgym_class
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) InstructorId, ClassId, MemberId;
+  mapping for zgym_class {
+   InstructorId = instructor_id;
+   ClassId = class_id;
+   MemberId = member_id;
+   Createdby = createdby;
+   Createdat = createdat;
+   Lastchangedby = lastchangedby;
+   Lastchangedat = lastchangedat;
+   Locallastchanged = locallastchanged;
+  }
+}

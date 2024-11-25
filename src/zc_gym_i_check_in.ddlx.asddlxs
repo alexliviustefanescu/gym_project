@@ -1,0 +1,148 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Projection CDS View for ZGYM_I_CHECK_IN'
+@UI.headerInfo.typeNamePlural: 'Projection CDS View for ZGYM_I_CHECK_IN'
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'UserId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'UserId'
+annotate view ZC_GYM_I_CHECK_IN with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  UserId;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  CheckIn;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  CheckDate;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  CheckOut;
+  
+  @UI.identification: [ {
+    position: 50,
+    label: 'Location'
+  } ]
+  @UI.lineItem: [ {
+    position: 50,
+    label: 'Location'
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  Location;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Room;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  @UI.hidden: true
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80,
+    label: 'Created At'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  @UI.hidden: true
+  Createdat;
+  
+  @EndUserText.label: 'Lastchangedby'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Lastchangedby'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Lastchangedby'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  @UI.hidden: true
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  @UI.hidden: true
+  Lastchangedat;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  @UI.hidden: true
+  Locallastchanged;
+}

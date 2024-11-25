@@ -1,0 +1,28 @@
+managed implementation in class zbp_gym_i_mem unique;
+strict ( 2 );
+
+define behavior for ZGYM_I_MEM //alias <alias_name>
+persistent table zgym_mem
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) UserId, MembershipId, StartDate;
+  mapping for zgym_mem{
+   UserId = user_id;
+   MembershipId = membership_id;
+   StartDate = start_date;
+   EndDate = end_date;
+   Type = type;
+   Status = status;
+   Createdby = createdby;
+   Createdat = createdat;
+   Lastchangedby = lastchangedby;
+   Lastchangedat = lastchangedat;
+   Locallastchanged = locallastchanged;
+  }
+
+}

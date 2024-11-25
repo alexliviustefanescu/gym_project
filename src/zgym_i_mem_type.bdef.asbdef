@@ -1,0 +1,29 @@
+managed implementation in class zbp_gym_i_mem_type unique;
+strict ( 2 );
+
+define behavior for ZGYM_I_MEM_TYPE //alias <alias_name>
+persistent table zgym_mem_type
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Id;
+
+  mapping for zgym_mem_type
+    {
+      Id               = id;
+      Name             = name;
+      Price            = price;
+      Currency         = currency;
+      Type             = type;
+      Description      = description;
+      Createdby        = createdby;
+      Createdat        = createdat;
+      Lastchangedby    = lastchangedby;
+      Lastchangedat    = lastchangedat;
+      Locallastchanged = locallastchanged;
+    }
+}

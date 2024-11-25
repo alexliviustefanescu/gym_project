@@ -1,0 +1,6 @@
+@EndUserText.label: 'service definition for admin view'
+@ObjectModel.leadingEntity.name: 'ZGYM_C_USER_ADMIN'
+define service ZGYM_UI_ADMIN {
+  expose ZGYM_C_USER_ADMIN;
+  expose ZGYM_C_MEM_TYPE_ADMIN;
+}

@@ -1,0 +1,138 @@
+@Metadata.layer: #CORE
+annotate entity ZGYM_C_SCHEDULE_SUB
+  with 
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  ClassId;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  InstructorId;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  DayOfWeek;
+  
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  StartTime;
+  
+  @UI.identification: [ {
+    position: 50,
+    label: 'Location'
+  } ]
+  @UI.lineItem: [ {
+    position: 50,
+    label: 'Location',
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+    RoomNumber;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  @UI.hidden: true
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80,
+    label: 'Created At'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  @UI.hidden: true
+  Createdat;
+  
+  @EndUserText.label: 'Lastchangedby'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Lastchangedby'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Lastchangedby'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  @UI.hidden: true
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  @UI.hidden: true
+  Lastchangedat;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  @UI.hidden: true
+  Locallastchanged;
+  
+}
