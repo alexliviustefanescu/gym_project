@@ -19,7 +19,7 @@ etag master LastChangedAt
   create;
   update;
   delete;
-  field ( readonly ) ClassId, InstructorId, DayOfWeek, StartTime;
+  field ( readonly ) ClassId;  //, InstructorId, DayOfWeek, StartTime;
   mapping for zgym_schedule
     {
       ClassId          = class_id;

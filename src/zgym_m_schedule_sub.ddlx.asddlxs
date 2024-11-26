@@ -59,7 +59,7 @@ annotate entity ZGYM_C_SCHEDULE_SUB
   
   @UI.identification: [ {
     position: 50,
-    label: 'Location'
+    label: 'Room Number'
   } ]
   @UI.lineItem: [ {
     position: 50,
