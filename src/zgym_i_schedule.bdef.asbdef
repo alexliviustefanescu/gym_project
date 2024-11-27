@@ -14,12 +14,15 @@ etag master LastChangedAt
   draft action Activate optimized;
   draft action Discard;
   draft action Resume;
-    draft determine action Prepare;
+    draft determine action Prepare { validation validateDOW;}
 
   create;
   update;
   delete;
-  field ( readonly ) ClassId;  //, InstructorId, DayOfWeek, StartTime;
+  field (  readonly, numbering : managed ) ClassId; //InstructorId, DayOfWeek, StartTime;
+
+  validation validateDOW on save { field DayOfWeek; create; }
+
   mapping for zgym_schedule
     {
       ClassId          = class_id;

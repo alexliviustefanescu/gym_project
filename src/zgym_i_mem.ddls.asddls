@@ -7,6 +7,7 @@
   sizeCategory: #S,
   dataClass: #MIXED
 }
+/*+[hideWarning] { "IDS" : [ "CARDINALITY_CHECK" ]  } */
 define root view entity ZGYM_I_MEM
   as select from zgym_mem as Memberships
   association [1..1] to ZGYM_I_USER     as _Users           on $projection.UserId = _Users.Id

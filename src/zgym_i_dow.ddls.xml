@@ -3,10 +3,10 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DDLS>
-    <DDLNAME>ZGYM_C_USER_REC</DDLNAME>
+    <DDLNAME>ZGYM_I_DOW</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>Receptionist Projection for user</DDTEXT>
-    <SOURCE_TYPE>P</SOURCE_TYPE>
+    <DDTEXT>Roles cds</DDTEXT>
+    <SOURCE_TYPE>W</SOURCE_TYPE>
    </DDLS>
   </asx:values>
  </asx:abap>

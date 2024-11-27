@@ -1,16 +1,29 @@
 managed implementation in class zbp_gym_i_user unique;
 strict ( 2 );
+with draft;
 
-define behavior for ZGYM_I_USER //alias <alias_name>
+define behavior for ZGYM_I_USER alias User
 persistent table zgym_user
+draft table zgym_user_md
 lock master
+total etag LastChangedAt
 authorization master ( instance )
-//etag master <field_name>
+etag master LastChangedAt
 {
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare{validation validateRole;}
+
   create;
   update;
   delete;
+
   field ( readonly ) Id, Ssn;
+
+  validation validateRole on save { field Role; create; }
+
   mapping for zgym_user
     {
       Id               = id;

@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service definition for receptionist 2'
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZGYM_C_USER_REC_1'
+  }
+}
+define service ZGYM_UI_RECEPTIONIST_2 {
+  expose ZGYM_C_USER_REC_2;
+}

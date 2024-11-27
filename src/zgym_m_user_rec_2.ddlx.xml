@@ -4,8 +4,8 @@
   <asx:values>
    <DDLX>
     <METADATA>
-     <NAME>ZC_GYM_I_CHECK_IN</NAME>
-     <DESCRIPTION>Metadata Extension for ZC_GYM_I_CHECK_IN</DESCRIPTION>
+     <NAME>ZGYM_M_USER_REC_2</NAME>
+     <DESCRIPTION>Metadata extension for ZGYM_C_USER_REC_2</DESCRIPTION>
      <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
     </METADATA>
    </DDLX>

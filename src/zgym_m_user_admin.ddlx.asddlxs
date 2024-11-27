@@ -1,6 +1,13 @@
 @Metadata.layer: #CORE
 annotate entity ZGYM_C_USER_ADMIN with
 {
+@UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
   @UI.identification: [ {
       position: 10
     } ]

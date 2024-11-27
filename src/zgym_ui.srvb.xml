@@ -38,6 +38,25 @@
        </SERVICE_CONTENT>
       </item>
       <item>
+       <SERVICE_NAME>ZGYM_UI_RECEPTIONIST_2</SERVICE_NAME>
+       <SERVICE_CONTENT>
+        <item>
+         <SERVICE_VERSION>0001</SERVICE_VERSION>
+         <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
+         <SRVD_REF>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zgym_ui_receptionist_2</URI>
+          <TYPE>SRVD/SRV</TYPE>
+          <NAME>ZGYM_UI_RECEPTIONIST_2</NAME>
+         </SRVD_REF>
+         <BIND_TYPE_DATA>
+          <CONTENT>
+           <ENCODING>base64</ENCODING>
+          </CONTENT>
+         </BIND_TYPE_DATA>
+        </item>
+       </SERVICE_CONTENT>
+      </item>
+      <item>
        <SERVICE_NAME>ZGYM_UI_SUB</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
@@ -47,6 +66,25 @@
           <URI>/sap/bc/adt/ddic/srvd/sources/zgym_ui_subscriber</URI>
           <TYPE>SRVD/SRV</TYPE>
           <NAME>ZGYM_UI_SUBSCRIBER</NAME>
+         </SRVD_REF>
+         <BIND_TYPE_DATA>
+          <CONTENT>
+           <ENCODING>base64</ENCODING>
+          </CONTENT>
+         </BIND_TYPE_DATA>
+        </item>
+       </SERVICE_CONTENT>
+      </item>
+      <item>
+       <SERVICE_NAME>zgym_ui_receptionist_1</SERVICE_NAME>
+       <SERVICE_CONTENT>
+        <item>
+         <SERVICE_VERSION>0001</SERVICE_VERSION>
+         <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
+         <SRVD_REF>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zgym_ui_receptionist_1</URI>
+          <TYPE>SRVD/SRV</TYPE>
+          <NAME>ZGYM_UI_RECEPTIONIST_1</NAME>
          </SRVD_REF>
          <BIND_TYPE_DATA>
           <CONTENT>

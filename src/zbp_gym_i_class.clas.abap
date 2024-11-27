@@ -1,15 +1,5 @@
-class ZBP_GYM_I_CLASS definition
-  public
-  abstract
-  final
-  create public .
-
-public section.
-protected section.
-private section.
+CLASS zbp_gym_i_class DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zgym_i_class.
 ENDCLASS.
 
-
-
-CLASS ZBP_GYM_I_CLASS IMPLEMENTATION.
+CLASS zbp_gym_i_class IMPLEMENTATION.
 ENDCLASS.

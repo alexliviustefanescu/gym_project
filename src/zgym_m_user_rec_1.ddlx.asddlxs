@@ -1,11 +1,6 @@
 @Metadata.layer: #CORE
-@UI.headerInfo.typeName: 'Projection CDS View for ZGYM_I_CHECK_IN'
-@UI.headerInfo.typeNamePlural: 'Projection CDS View for ZGYM_I_CHECK_IN'
-@UI.headerInfo.title.type: #STANDARD
-@UI.headerInfo.title.value: 'UserId'
-@UI.headerInfo.description.type: #STANDARD
-@UI.headerInfo.description.value: 'UserId'
-annotate view ZC_GYM_I_CHECK_IN with
+annotate entity ZGYM_C_USER_REC_1
+  with 
 {
   @UI.facet: [ {
     label: 'General Information', 
@@ -18,131 +13,170 @@ annotate view ZC_GYM_I_CHECK_IN with
     position: 10 
   } ]
   @UI.lineItem: [ {
-    position: 10 
+    position: 10,
+    cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
     position: 10 
   } ]
-  UserId;
+  @EndUserText.label: 'User ID'
+  Id;
   
-  @UI.identification: [ {
+   @UI.identification: [ {
     position: 20 
   } ]
   @UI.lineItem: [ {
-    position: 20 
+    position: 20,
+    cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
     position: 20 
   } ]
-  CheckIn;
-  
-  @UI.identification: [ {
+  @EndUserText.label: 'Social Security Number'
+  Ssn;
+   @UI.identification: [ {
     position: 30 
   } ]
   @UI.lineItem: [ {
-    position: 30 
+    position: 30,
+    cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
     position: 30 
   } ]
-  CheckDate;
+   @EndUserText.label: 'Role'
+  Role;
   
-  @UI.identification: [ {
+   @UI.identification: [ {
     position: 40 
   } ]
   @UI.lineItem: [ {
-    position: 40 
+    position: 40,
+    cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
     position: 40 
   } ]
-  CheckOut;
+   @EndUserText.label: 'Name'
+  Name;
   
-  @UI.identification: [ {
+   @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
     position: 50,
-    label: 'Location'
-  } ]
-  @UI.lineItem: [ {
-    position: 50,
-    label: 'Location'
+    cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
-    position: 50
+    position: 50 
   } ]
-  Location;
+   @EndUserText.label: 'Date of birth'
+  Dob;
+  
+   @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+   @EndUserText.label: 'Email'
+  Email;
+  
+   @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+   @EndUserText.label: 'Phone number'
+  PhoneNumber;
+  
+   @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+   @EndUserText.label: 'Country code'
+  CountryCode;
+
   
   @UI.identification: [ {
-    position: 60 
+    position: 90 
   } ]
   @UI.lineItem: [ {
-    position: 60 
+    position: 90 
   } ]
   @UI.selectionField: [ {
-    position: 60 
-  } ]
-  Room;
-  
-  @UI.identification: [ {
-    position: 70 
-  } ]
-  @UI.lineItem: [ {
-    position: 70 
-  } ]
-  @UI.selectionField: [ {
-    position: 70 
+    position: 90 
   } ]
   @UI.hidden: true
   Createdby;
   
   @UI.identification: [ {
-    position: 80 
+    position: 100 
   } ]
   @UI.lineItem: [ {
-    position: 80,
+    position: 100,
     label: 'Created At'
   } ]
   @UI.selectionField: [ {
-    position: 80 
+    position: 100 
   } ]
   @UI.hidden: true
   Createdat;
   
   @EndUserText.label: 'Lastchangedby'
   @UI.identification: [ {
-    position: 90 , 
+    position: 110 , 
     label: 'Lastchangedby'
   } ]
   @UI.lineItem: [ {
-    position: 90 , 
+    position: 110 , 
     label: 'Lastchangedby'
   } ]
   @UI.selectionField: [ {
-    position: 90 
+    position: 110 
   } ]
   @UI.hidden: true
   Lastchangedby;
   
   @UI.identification: [ {
-    position: 100 
+    position: 120 
   } ]
   @UI.lineItem: [ {
-    position: 100 
+    position: 120 
   } ]
   @UI.selectionField: [ {
-    position: 100 
+    position: 120 
   } ]
   @UI.hidden: true
   Lastchangedat;
   
   @UI.identification: [ {
-    position: 110 
+    position: 130 
   } ]
   @UI.lineItem: [ {
-    position: 110 
+    position: 130 
   } ]
   @UI.selectionField: [ {
-    position: 110 
+    position: 130 
   } ]
   @UI.hidden: true
+  
   Locallastchanged;
+
+
 }

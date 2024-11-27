@@ -1,0 +1,182 @@
+@Metadata.layer: #CORE
+annotate entity ZGYM_C_USER_REC_2 with
+{
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  }]
+  
+  @UI.identification: [ {
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10,
+    cssDefault.width: '5rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @EndUserText.label: 'User ID'
+  Id;
+
+  @UI.identification: [ {
+  position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20,
+    cssDefault.width: '5rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  @EndUserText.label: 'Role'
+  Role;
+
+  @UI.identification: [ {
+  position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @EndUserText.label: 'Name'
+  Name;
+
+  @UI.identification: [ {
+   position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  @EndUserText.label: 'Social Security Number'
+  Ssn;
+
+  @UI.identification: [ {
+   position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50,
+    cssDefault.width: '6rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  @EndUserText.label: 'Date of birth'
+  Dob;
+
+  @UI.identification: [ {
+   position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60,
+    cssDefault.width: '15rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  @EndUserText.label: 'Email'
+  Email;
+
+  @UI.identification: [ {
+   position: 70
+  } ]
+  @UI.lineItem: [ {
+    position: 70,
+    cssDefault.width: '5rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  @EndUserText.label: 'Country code'
+  CountryCode;
+
+  @UI.identification: [ {
+  position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80,
+    cssDefault.width: '10rem'
+  } ]
+  @UI.selectionField: [ {
+    position: 80
+  } ]
+  @EndUserText.label: 'Phone number'
+  PhoneNumber;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  @UI.selectionField: [ {
+    position: 90
+  } ]
+  @UI.hidden: true
+  Createdby;
+
+  @UI.identification: [ {
+    position: 100
+  } ]
+  @UI.lineItem: [ {
+    position: 100,
+    label: 'Created At'
+  } ]
+  @UI.selectionField: [ {
+    position: 100
+  } ]
+  @UI.hidden: true
+  Createdat;
+
+  @EndUserText.label: 'Lastchangedby'
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Lastchangedby'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Lastchangedby'
+  } ]
+  @UI.selectionField: [ {
+    position: 110
+  } ]
+  @UI.hidden: true
+  Lastchangedby;
+
+  @UI.identification: [ {
+    position: 120
+  } ]
+  @UI.lineItem: [ {
+    position: 120
+  } ]
+  @UI.selectionField: [ {
+    position: 120
+  } ]
+  @UI.hidden: true
+  Lastchangedat;
+
+  @UI.identification: [ {
+    position: 130
+  } ]
+  @UI.lineItem: [ {
+    position: 130
+  } ]
+  @UI.selectionField: [ {
+    position: 130
+  } ]
+  @UI.hidden: true
+
+  Locallastchanged;
+
+
+}
