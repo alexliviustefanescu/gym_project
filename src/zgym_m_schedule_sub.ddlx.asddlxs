@@ -1,62 +1,70 @@
 @Metadata.layer: #CORE
-annotate entity ZGYM_C_SCHEDULE_SUB
-  with 
+@UI: { headerInfo: { typeName: 'Schedule Page - Object', 
+                     title: { value: 'ClassId'},
+                     typeNamePlural: 'Schedule Page - Main'
+                     }
+     }
+annotate entity ZGYM_C_SCHEDULE_SUB with
 {
   @UI.facet: [ {
-    label: 'General Information', 
-    id: 'GeneralInfo', 
-    purpose: #STANDARD, 
-    position: 10 , 
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
     type: #IDENTIFICATION_REFERENCE
   } ]
   @UI.identification: [ {
-    position: 10 
+    position: 10
   } ]
   @UI.lineItem: [ {
     position: 10,
     cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
-    position: 10 
+    position: 10
   } ]
+  @EndUserText.label: 'Class ID'
   ClassId;
-  
+
   @UI.identification: [ {
-    position: 20 
+    position: 20
   } ]
   @UI.lineItem: [ {
     position: 20,
     cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
-    position: 20 
+    position: 20
   } ]
+  @EndUserText.label: 'Instructor ID'
   InstructorId;
-  
+
   @UI.identification: [ {
-    position: 30 
+    position: 30
   } ]
   @UI.lineItem: [ {
     position: 30,
     cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
-    position: 30 
+    position: 30
   } ]
+  @EndUserText.label: 'Day of week'
   DayOfWeek;
-  
+
   @UI.identification: [ {
-    position: 40 
+    position: 40
   } ]
   @UI.lineItem: [ {
     position: 40,
     cssDefault.width: '15rem'
   } ]
   @UI.selectionField: [ {
-    position: 40 
+    position: 40
   } ]
+  @EndUserText.label: 'Start time'
   StartTime;
-  
+
   @UI.identification: [ {
     position: 50,
     label: 'Room Number'
@@ -69,21 +77,22 @@ annotate entity ZGYM_C_SCHEDULE_SUB
   @UI.selectionField: [ {
     position: 50
   } ]
-    RoomNumber;
+  @EndUserText.label: 'Room number'
+  RoomNumber;
 
   @UI.hidden: true
   Createdby;
-  
+
   @UI.hidden: true
   Createdat;
-  
+
   @UI.hidden: true
   Lastchangedby;
-  
+
   @UI.hidden: true
   Lastchangedat;
-  
+
   @UI.hidden: true
   Locallastchanged;
-  
+
 }

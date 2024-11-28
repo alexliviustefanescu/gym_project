@@ -16,27 +16,36 @@ CLASS zcl_add_entries IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
-    DATA lrole TYPE  zgym_roles.
+*    DATA lrole TYPE  zgym_roles.
+*
+*    lrole-role = 'ADM'.
+*    lrole-description = 'Admin'.
+*
+*    INSERT zgym_roles FROM @lrole.
+*
+*    lrole-role = 'MEM'.
+*    lrole-description = 'Member'.
+*
+*    INSERT zgym_roles FROM @lrole.
+*
+*    lrole-role = 'REC'.
+*    lrole-description = 'Receptionist'.
+*
+*    INSERT zgym_roles FROM @lrole.
+*
+*    lrole-role = 'INS'.
+*    lrole-description = 'Instructor'.
+*
+*    INSERT zgym_roles FROM @lrole.
+*    COMMIT WORK.
 
-    lrole-role = 'ADM'.
-    lrole-description = 'Admin'.
+    DATA lmem TYPE  zgym_mem.
 
-    INSERT zgym_roles FROM @lrole.
+    lmem-user_id = '111'.
+    lmem-start_date = '20240101'.
+    lmem-end_date = '20240102'.
 
-    lrole-role = 'MEM'.
-    lrole-description = 'Member'.
-
-    INSERT zgym_roles FROM @lrole.
-
-    lrole-role = 'REC'.
-    lrole-description = 'Receptionist'.
-
-    INSERT zgym_roles FROM @lrole.
-
-    lrole-role = 'INS'.
-    lrole-description = 'Instructor'.
-
-    INSERT zgym_roles FROM @lrole.
+    INSERT zgym_mem from @lmem.
     COMMIT WORK.
 
   ENDMETHOD.

@@ -9,7 +9,7 @@
 }
 define root view entity ZGYM_I_USER
   as select from zgym_user
-  association [0..*] to ZGYM_I_MEM as _Membership on $projection.Id = _Membership.UserId
+  association [1..*] to ZGYM_I_MEM as _Membership on $projection.Id = _Membership.UserId
 {
   key   id               as Id,
   key   ssn              as Ssn,
@@ -24,6 +24,6 @@ define root view entity ZGYM_I_USER
         lastchangedby    as Lastchangedby,
         lastchangedat    as Lastchangedat,
         locallastchanged as Locallastchanged,
-        
+
         _Membership
 }

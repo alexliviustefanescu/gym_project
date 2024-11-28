@@ -6,9 +6,13 @@
 "ZGYM_I_USER"
 ],
 "ASSOCIATED":
-[],
+[
+"ZGYM_I_MEM"
+],
 "BASE":
-[],
+[
+"ZGYM_I_USER"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":

@@ -20,9 +20,11 @@ etag master LastChangedAt
   update;
   delete;
 
-  field ( readonly ) Id, Ssn;
+  field ( readonly:update ) Id, Ssn;
 
   validation validateRole on save { field Role; create; }
+  validation validateCode on save { field CountryCode; create; }
+
 
   mapping for zgym_user
     {

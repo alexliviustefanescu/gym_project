@@ -1,6 +1,7 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'cds view for memberships'
+@Metadata.allowExtensions: true
 @Metadata.ignorePropagatedAnnotations: true
 @ObjectModel.usageType:{
   serviceQuality: #X,
