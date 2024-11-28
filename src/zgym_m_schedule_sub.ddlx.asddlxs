@@ -70,68 +70,19 @@ annotate entity ZGYM_C_SCHEDULE_SUB
     position: 50
   } ]
     RoomNumber;
-  
-  @UI.identification: [ {
-    position: 70 
-  } ]
-  @UI.lineItem: [ {
-    position: 70 
-  } ]
-  @UI.selectionField: [ {
-    position: 70 
-  } ]
+
   @UI.hidden: true
   Createdby;
   
-  @UI.identification: [ {
-    position: 80 
-  } ]
-  @UI.lineItem: [ {
-    position: 80,
-    label: 'Created At'
-  } ]
-  @UI.selectionField: [ {
-    position: 80 
-  } ]
   @UI.hidden: true
   Createdat;
   
-  @EndUserText.label: 'Lastchangedby'
-  @UI.identification: [ {
-    position: 90 , 
-    label: 'Lastchangedby'
-  } ]
-  @UI.lineItem: [ {
-    position: 90 , 
-    label: 'Lastchangedby'
-  } ]
-  @UI.selectionField: [ {
-    position: 90 
-  } ]
   @UI.hidden: true
   Lastchangedby;
   
-  @UI.identification: [ {
-    position: 100 
-  } ]
-  @UI.lineItem: [ {
-    position: 100 
-  } ]
-  @UI.selectionField: [ {
-    position: 100 
-  } ]
   @UI.hidden: true
   Lastchangedat;
   
-  @UI.identification: [ {
-    position: 110 
-  } ]
-  @UI.lineItem: [ {
-    position: 110 
-  } ]
-  @UI.selectionField: [ {
-    position: 110 
-  } ]
   @UI.hidden: true
   Locallastchanged;
   

@@ -1,7 +1,7 @@
 @Metadata.layer: #CORE
 annotate entity ZGYM_C_USER_REC_2 with
 {
-  @UI.facet: [ {
+@UI.facet: [ {
     label: 'General Information',
     id: 'GeneralInfo',
     purpose: #STANDARD,
@@ -113,67 +113,19 @@ annotate entity ZGYM_C_USER_REC_2 with
   @EndUserText.label: 'Phone number'
   PhoneNumber;
 
-  @UI.identification: [ {
-    position: 90
-  } ]
-  @UI.lineItem: [ {
-    position: 90
-  } ]
-  @UI.selectionField: [ {
-    position: 90
-  } ]
   @UI.hidden: true
   Createdby;
 
-  @UI.identification: [ {
-    position: 100
-  } ]
-  @UI.lineItem: [ {
-    position: 100,
-    label: 'Created At'
-  } ]
-  @UI.selectionField: [ {
-    position: 100
-  } ]
   @UI.hidden: true
   Createdat;
 
-  @EndUserText.label: 'Lastchangedby'
-  @UI.identification: [ {
-    position: 110 ,
-    label: 'Lastchangedby'
-  } ]
-  @UI.lineItem: [ {
-    position: 110 ,
-    label: 'Lastchangedby'
-  } ]
-  @UI.selectionField: [ {
-    position: 110
-  } ]
   @UI.hidden: true
   Lastchangedby;
 
-  @UI.identification: [ {
-    position: 120
-  } ]
-  @UI.lineItem: [ {
-    position: 120
-  } ]
-  @UI.selectionField: [ {
-    position: 120
-  } ]
   @UI.hidden: true
   Lastchangedat;
 
-  @UI.identification: [ {
-    position: 130
-  } ]
-  @UI.lineItem: [ {
-    position: 130
-  } ]
-  @UI.selectionField: [ {
-    position: 130
-  } ]
+
   @UI.hidden: true
 
   Locallastchanged;
