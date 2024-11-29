@@ -1,0 +1,90 @@
+@Metadata.layer: #CORE
+annotate entity ZGYM_C_CLASS_SUB with
+{
+  @UI.facet: [ {
+    label: 'Class Information',
+    id: 'ClassInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @EndUserText.label: 'Instructor ID'
+  InstructorId;
+  @UI.identification: [ {
+    position: 15
+  } ]
+  @UI.lineItem: [ {
+    position: 15
+  } ]
+  @UI.selectionField: [ {
+    position: 15
+  } ]
+  @EndUserText.label: 'Instructor Name'
+  InsName;
+  @UI.identification: [ {
+  position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  @EndUserText.label: 'Class ID'
+  ClassId;
+  @UI.identification: [ {
+  position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @EndUserText.label: 'Class Name'
+  ClassName;
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  @EndUserText.label: 'Available Slots'
+  AvailableSlots;
+  @UI.identification: [ {
+  position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  ClassDescription;
+
+  @UI.hidden: true
+  memberid;
+  @UI.hidden: true
+  createdby;
+  @UI.hidden: true
+  createdat;
+  @UI.hidden: true
+  lastchangedby;
+  @UI.hidden: true
+  lastchangedat;
+  @UI.hidden: true
+  locallastchanged;
+
+}

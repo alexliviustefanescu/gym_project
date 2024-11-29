@@ -20,6 +20,12 @@
      <MSGNR>002</MSGNR>
      <TEXT>Invalid country code</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZGYM_MESSAGE_CLASS</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Invalid email adress</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>

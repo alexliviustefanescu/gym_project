@@ -24,6 +24,7 @@ etag master LastChangedAt
 
   validation validateRole on save { field Role; create; }
   validation validateCode on save { field CountryCode; create; }
+  validation validateMail on save { field Email; create; }
 
 
   mapping for zgym_user
