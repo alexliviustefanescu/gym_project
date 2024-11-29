@@ -5,6 +5,10 @@
 define root view entity ZGYM_C_SCHEDULE_SUB
   provider contract transactional_query as projection on ZGYM_I_SCHEDULE
 {
+  @Consumption.valueHelpDefinition: 
+      [{ entity: { name : 'ZGYM_I_CLASS' , element: 'ClassId' } ,
+         distinctValues: true
+                               }]
   key ClassId,
   @Consumption.valueHelpDefinition: 
       [{ entity: { name : 'ZGYM_I_USER' , element: 'Id' } ,

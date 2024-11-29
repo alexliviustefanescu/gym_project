@@ -20,17 +20,6 @@ annotate entity ZGYM_C_CLASS_SUB with
   @EndUserText.label: 'Instructor ID'
   InstructorId;
   @UI.identification: [ {
-    position: 15
-  } ]
-  @UI.lineItem: [ {
-    position: 15
-  } ]
-  @UI.selectionField: [ {
-    position: 15
-  } ]
-  @EndUserText.label: 'Instructor Name'
-  InsName;
-  @UI.identification: [ {
   position: 20
   } ]
   @UI.lineItem: [ {
@@ -42,7 +31,7 @@ annotate entity ZGYM_C_CLASS_SUB with
   @EndUserText.label: 'Class ID'
   ClassId;
   @UI.identification: [ {
-  position: 30
+    position: 30
   } ]
   @UI.lineItem: [ {
     position: 30
@@ -50,41 +39,17 @@ annotate entity ZGYM_C_CLASS_SUB with
   @UI.selectionField: [ {
     position: 30
   } ]
-  @EndUserText.label: 'Class Name'
-  ClassName;
-  @UI.identification: [ {
-    position: 40
-  } ]
-  @UI.lineItem: [ {
-    position: 40
-  } ]
-  @UI.selectionField: [ {
-    position: 40
-  } ]
-  @EndUserText.label: 'Available Slots'
-  AvailableSlots;
-  @UI.identification: [ {
-  position: 50
-  } ]
-  @UI.lineItem: [ {
-    position: 50
-  } ]
-  @UI.selectionField: [ {
-    position: 50
-  } ]
-  ClassDescription;
-
+  @EndUserText.label: 'Member ID'
+  MemberId;
   @UI.hidden: true
-  memberid;
+  Createdby;
   @UI.hidden: true
-  createdby;
+  Createdat;
   @UI.hidden: true
-  createdat;
+  Lastchangedby;
   @UI.hidden: true
-  lastchangedby;
+  Lastchangedat;
   @UI.hidden: true
-  lastchangedat;
-  @UI.hidden: true
-  locallastchanged;
+  Locallastchanged;
 
 }

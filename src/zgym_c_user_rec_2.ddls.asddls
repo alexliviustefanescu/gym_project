@@ -8,6 +8,10 @@ define root view entity ZGYM_C_USER_REC_2
 {
   key Id,
   key Ssn,
+  @Consumption.valueHelpDefinition: [{ entity: {
+              name: 'ZGYM_I_ROLES',
+              element: 'Role'
+              } }]
       Role,
       Name,
       Dob,

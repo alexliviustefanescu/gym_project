@@ -19,7 +19,7 @@ etag master LastChangedAt
   create;
   update;
   delete;
-  field (  readonly, numbering : managed ) ClassId; //InstructorId, DayOfWeek, StartTime;
+//  field (  readonly, numbering : managed ) ClassId; //InstructorId, DayOfWeek, StartTime;
 
   validation validateDOW on save { field DayOfWeek; create; }
 
