@@ -8,6 +8,7 @@ CLASS zcl_add_entries_sub DEFINITION
     METHODS addcc.
     METHODS addusers.
     METHODS addclasstypes.
+    METHODS addmemtype.
     INTERFACES if_oo_adt_classrun .
   PROTECTED SECTION.
   PRIVATE SECTION.
@@ -156,7 +157,13 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
-    me->addcc(  ).
+*    me->addusers(  ).
+*    out->write( '10 users added successfully' ).
+*    me->addclasstypes(  ).
+*    out->write( 'Class Types added successfully' ).
+*    me->addmemtype(  ).
+    DELETE FROM zgym_mem_md.
+    out->write( 'Ran successfully' ).
   ENDMETHOD.
 
   METHOD addusers.
@@ -173,31 +180,31 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
 
     lt_roles = VALUE #( ( 'ADM' ) ( 'MEM' ) ( 'REC' ) ( 'INS' ) ).
 
-    DO 50 TIMES.
+    DO 10 TIMES.
       CLEAR ls_zgym_user.
 
       " Generate unique ID for each user
-      ls_zgym_user-id = |{ sy-tabix }|.  " User ID will be from 000001 to 000050
+      ls_zgym_user-id = |{ sy-index }|.  " User ID will be from 000001 to 000050
 
       " Assign role randomly from the available roles
-      READ TABLE lt_roles INDEX ( sy-tabix MOD 4 + 1 ) TRANSPORTING NO FIELDS.
-      ls_zgym_user-role = lt_roles[ sy-tabix MOD 4 + 1 ].
+      READ TABLE lt_roles INDEX ( sy-index MOD 4 + 1 ) TRANSPORTING NO FIELDS.
+      ls_zgym_user-role = lt_roles[ sy-index MOD 4 + 1 ].
 
       " Fill out other fields with dummy data.
-      ls_zgym_user-ssn = |{ sy-tabix * 100000 + 12345 }|.  " Generating dummy SSN
-      ls_zgym_user-name = |User { sy-tabix }|.  " User name as User 1, User 2, ...
+      ls_zgym_user-ssn = |{ sy-index * 100000 + 12345 }|.  " Generating dummy SSN
+      ls_zgym_user-name = |User { sy-index }|.  " User name as User 1, User 2, ...
       ls_zgym_user-dob = '19900101'.  " Fixed date of birth for all users, change if needed
-      ls_zgym_user-email = |user{ sy-tabix }@gym.com|.  " Email: user1@gym.com, user2@gym.com, etc.
+      ls_zgym_user-email = |user{ sy-index }@gym.com|.  " Email: user1@gym.com, user2@gym.com, etc.
       ls_zgym_user-country_code = lv_country.
-      ls_zgym_user-phone_number = |{ sy-tabix * 1000000000 }|.  " Generating dummy phone numbers
+      ls_zgym_user-phone_number = |{ sy-index * 10000000 }|.  " Generating dummy phone numbers
 
       " Log information (createdby, createdat, etc.)
-      DATA(lv_date) = cl_abap_context_info=>get_system_date(  ).
-      ls_zgym_user-createdby = 'admin'.  " Assume admin as the creator
-      ls_zgym_user-createdat = lv_date.  " Current date
-      ls_zgym_user-lastchangedby = 'admin'.  " Last changed by
-      ls_zgym_user-lastchangedat = lv_date.  " Last changed date
-      ls_zgym_user-locallastchanged = lv_date.  " Local change date
+*      DATA(lv_date) = cl_abap_context_info=>get_system_date(  ).
+*      ls_zgym_user-createdby = 'admin'.  " Assume admin as the creator
+*      ls_zgym_user-createdat = .  " Current date
+*      ls_zgym_user-lastchangedby = 'admin'.  " Last changed by
+*      ls_zgym_user-lastchangedat = CONV #(lv_date).  " Last changed date
+*      ls_zgym_user-locallastchanged = lv_date.  " Local change date
 
       " Append the generated row to the internal table
       APPEND ls_zgym_user TO lt_zgym_user.
@@ -214,11 +221,11 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
   METHOD addclasstypes.
     DATA: lt_zgym_class_type TYPE TABLE OF zgym_class_type,
           ls_zgym_class_type TYPE zgym_class_type,
-    lv_uuid            type sysuuid_x16,
-    lv_name            type zgym_class_name,
-    lv_description     type zgym_class_description,
-    lv_duration        type int2,
-    lv_max_number      type int4.
+          lv_uuid            TYPE sysuuid_x16,
+          lv_name            TYPE zgym_class_name,
+          lv_description     TYPE zgym_class_description,
+          lv_duration        TYPE int2,
+          lv_max_number      TYPE int4.
 
     " Define a few dummy gym class names and descriptions
     DATA: lt_class_names TYPE TABLE OF zgym_class_name.
@@ -241,7 +248,11 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
 
     LOOP AT lt_class_names INTO lv_name.
       " Generate a unique UUID for each class
-*      lv_uuid = CALL FUNCTION SYSUUID.
+      TRY.
+          lv_uuid = cl_system_uuid=>create_uuid_x16_static(  ).
+        CATCH cx_uuid_error.
+          "handle exception
+      ENDTRY.
 
       " Fetch the corresponding description from the description table
       READ TABLE lt_class_descriptions INDEX sy-tabix TRANSPORTING NO FIELDS.
@@ -264,11 +275,11 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
       ls_zgym_class_type-max_number = lv_max_number.
 
       " Log information (createdby, createdat, etc.)
-      ls_zgym_class_type-createdby = 'admin'.  " Assume admin as the creator
-      ls_zgym_class_type-createdat = cl_abap_context_info=>get_system_date(  ).  " Current date
-      ls_zgym_class_type-lastchangedby = 'admin'.  " Last changed by
-      ls_zgym_class_type-lastchangedat = cl_abap_context_info=>get_system_date(  ).  " Last changed date
-      ls_zgym_class_type-locallastchanged = cl_abap_context_info=>get_system_date(  ).  " Local change date
+*      ls_zgym_class_type-createdby = 'admin'.  " Assume admin as the creator
+*      ls_zgym_class_type-createdat = cl_abap_context_info=>get_system_date(  ).  " Current date
+*      ls_zgym_class_type-lastchangedby = 'admin'.  " Last changed by
+*      ls_zgym_class_type-lastchangedat = cl_abap_context_info=>get_system_date(  ).  " Last changed date
+*      ls_zgym_class_type-locallastchanged = cl_abap_context_info=>get_system_date(  ).  " Local change date
 
       " Append the generated gym class to the internal table
       APPEND ls_zgym_class_type TO lt_zgym_class_type.
@@ -280,6 +291,89 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
     ENDLOOP.
 
 *WRITE: 'Gym classes inserted into zgym_class_type table'.
+
+  ENDMETHOD.
+
+  METHOD addmemtype.
+
+    TYPES my_price TYPE P length 10 decimals 2.
+    TYPES my_cuky TYPE C length 3.
+    DATA: lt_zgym_mem_type TYPE TABLE OF zgym_mem_type,
+          ls_zgym_mem_type TYPE zgym_mem_type,
+    lv_uuid          type sysuuid_x16,
+    lv_name          type zgym_membership_name,
+    lv_description   type zgym_membership_description,
+    lv_price         type my_price,
+    lv_currency      TYPE my_cuky value 'RON',  " Currency is RON (Romanian Leu)
+    lv_type          type zgym_membership_type.
+
+    " Define the membership types, descriptions, and prices
+    DATA: lt_membership_types TYPE TABLE OF zgym_membership_name.
+
+    lt_membership_types = VALUE #(
+            ( 'MORNING' )
+            ( 'STANDARD' )
+            ( 'PREMIUM' ) ).
+
+    DATA: lt_descriptions TYPE TABLE OF zgym_membership_description.
+
+    lt_descriptions = VALUE #(
+            ( 'A discounted membership for morning classes only.' )
+            ( 'Full access to the gym facilities and standard classes.' )
+            ( 'Premium membership with all the classes.' ) ).
+
+    DATA: lt_prices TYPE TABLE OF my_price .
+
+    lt_prices = VALUE #(
+    ( CONV my_price( 50 ) )  " Price for MORNING membership
+    ( CONV my_price( 100 ) ) " Price for STANDARD membership
+    ( CONV my_price( 200 ) ) " Price for PREMIUM membership
+    ).
+
+    LOOP AT lt_membership_types INTO lv_name.
+      " Generate a unique UUID for each membership type
+      TRY.
+          lv_uuid = cl_system_uuid=>create_uuid_x16_static(  ).
+        CATCH cx_uuid_error.
+          "handle exception
+      ENDTRY.
+
+      " Fetch the corresponding description and price
+      READ TABLE lt_descriptions INDEX sy-tabix TRANSPORTING NO FIELDS.
+      IF sy-subrc = 0.
+        lv_description = lt_descriptions[ sy-tabix ].
+      ENDIF.
+
+      " Fetch the corresponding price for the membership type
+      READ TABLE lt_prices INDEX sy-tabix TRANSPORTING NO FIELDS.
+      IF sy-subrc = 0.
+        lv_price = lt_prices[ sy-tabix ].
+      ENDIF.
+
+      " Set the membership type based on the loop
+      lv_type = lv_name.
+
+      CLEAR ls_zgym_mem_type.
+
+      " Fill the fields
+      ls_zgym_mem_type-client = 100.
+      ls_zgym_mem_type-id = lv_uuid.
+      ls_zgym_mem_type-name = lv_name.
+      ls_zgym_mem_type-price = lv_price.
+      ls_zgym_mem_type-currency = lv_currency.
+      ls_zgym_mem_type-type = lv_type.
+      ls_zgym_mem_type-description = lv_description.
+
+      " Append the generated membership type to the internal table
+      APPEND ls_zgym_mem_type TO lt_zgym_mem_type.
+    ENDLOOP.
+
+    " Insert the generated data into the table (using INSERT statement)
+    LOOP AT lt_zgym_mem_type INTO ls_zgym_mem_type.
+      INSERT zgym_mem_type FROM @ls_zgym_mem_type.
+    ENDLOOP.
+
+*    WRITE: 'Membership types inserted into zgym_mem_type table'.
 
   ENDMETHOD.
 

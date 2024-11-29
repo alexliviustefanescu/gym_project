@@ -7,4 +7,5 @@
 define service ZGYM_UI_SUBSCRIBER {
   expose ZGYM_C_SCHEDULE_SUB;
   expose ZGYM_C_CLASS_SUB;
+  expose ZGYM_I_MEM;
 }

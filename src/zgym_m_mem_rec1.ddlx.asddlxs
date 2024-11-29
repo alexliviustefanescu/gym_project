@@ -20,10 +20,6 @@ annotate entity ZGYM_I_MEM with
   @UI.identification: [ {
      position: 10
    } ]
-  @UI.lineItem: [ {
-    position: 10,
-    cssDefault.width: '15rem'
-  } ]
   @UI.selectionField: [ {
     position: 10
   } ]
