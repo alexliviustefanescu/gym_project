@@ -1,17 +1,14 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Receptionist Projection for user'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 @Metadata.allowExtensions: true
 define root view entity ZGYM_C_USER_REC_2
   provider contract transactional_query
   as projection on ZGYM_I_USER
+  association [1..*] to ZGYM_I_MEM as _Membership on $projection.Id = _Membership.UserId
 {
   key Id,
   key Ssn,
-  @Consumption.valueHelpDefinition: [{ entity: {
-              name: 'ZGYM_I_ROLES',
-              element: 'Role'
-              } }]
       Role,
       Name,
       Dob,

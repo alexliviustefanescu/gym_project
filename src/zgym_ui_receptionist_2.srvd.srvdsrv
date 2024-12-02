@@ -6,4 +6,5 @@
 }
 define service ZGYM_UI_RECEPTIONIST_2 {
   expose ZGYM_C_USER_REC_2;
+  expose ZGYM_I_MEM;
 }

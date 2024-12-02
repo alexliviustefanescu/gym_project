@@ -2,7 +2,7 @@ managed implementation in class zbp_gym_i_class unique;
 strict ( 2 );
 with draft;
 
-define behavior for ZGYM_I_CLASS //alias <alias_name>
+define behavior for ZGYM_I_CLASS
 persistent table zgym_class
 draft table zgym_class_md
 lock master
@@ -20,6 +20,8 @@ etag master LastChangedAt
   create;
   update;
   delete;
+
+ field (mandatory:create, readonly:update) ClassId;
 //  field ( readonly ) InstructorId, ClassId, MemberId;
   mapping for zgym_class {
    InstructorId = instructor_id;

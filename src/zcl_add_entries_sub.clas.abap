@@ -159,10 +159,11 @@ CLASS zcl_add_entries_sub IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
 *    me->addusers(  ).
 *    out->write( '10 users added successfully' ).
+*    DELETE FROM zgym_class_type.
 *    me->addclasstypes(  ).
 *    out->write( 'Class Types added successfully' ).
 *    me->addmemtype(  ).
-    DELETE FROM zgym_mem_md.
+*    DELETE FROM zgym_mem_type.
     out->write( 'Ran successfully' ).
   ENDMETHOD.
 

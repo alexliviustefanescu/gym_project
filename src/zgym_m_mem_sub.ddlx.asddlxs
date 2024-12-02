@@ -7,13 +7,11 @@
 
      }
 
-
-annotate entity ZGYM_C_MEM_REC_1 with
+annotate entity ZGYM_I_MEM with
 {
 
-
   @UI.facet: [ {
-      label: 'General Information',
+      label: 'Membership details',
       id: 'GeneralInfo',
       purpose: #STANDARD,
       position: 10 ,
@@ -25,7 +23,7 @@ annotate entity ZGYM_C_MEM_REC_1 with
   @UI.selectionField: [ {
     position: 10
   } ]
-  @EndUserText.label: 'User ID'
+  @EndUserText.label: 'User Id'
   UserId;
 
   @UI.identification: [ {

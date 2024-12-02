@@ -16,6 +16,7 @@ define root view entity ZGYM_I_MEM_TYPE
       price            as Price,
       currency         as Currency,
       type             as Type,
+      tier             as Tier,
       description      as Description,
       createdby        as Createdby,
       createdat        as Createdat,

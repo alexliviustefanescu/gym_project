@@ -18,7 +18,6 @@ define root view entity ZGYM_C_MEM_REC_1
   Lastchangedat,
   Locallastchanged,
   /* Associations */
-  _MembershipTypes.Name,
-  _MembershipTypes.Description,
+  _MembershipTypes,
   _Users
 }

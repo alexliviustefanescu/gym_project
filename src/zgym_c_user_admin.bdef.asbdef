@@ -1,4 +1,4 @@
-projection;
+projection implementation in class zbp_gym_c_user_admin unique;
 strict ( 2 );
 use draft;
 
@@ -13,4 +13,6 @@ define behavior for ZGYM_C_USER_ADMIN
   use action Discard;
   use action Resume;
   use action Prepare;
+
+  action createMemType;
 }

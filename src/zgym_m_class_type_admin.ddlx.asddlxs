@@ -1,7 +1,8 @@
 @Metadata.layer: #CORE
-annotate entity ZGYM_C_MEM_TYPE_ADMIN with
+annotate entity ZGYM_C_CLASS_TYPE_ADMIN
+  with 
 {
-  @UI.facet: [ {
+    @UI.facet: [ {
     label: 'Class Information',
     id: 'ClassInfo',
     purpose: #STANDARD,
@@ -18,49 +19,49 @@ annotate entity ZGYM_C_MEM_TYPE_ADMIN with
     position: 10
   } ]
   Id;
-  @UI.identification: [ {
-      position: 10
-    } ]
-  @UI.lineItem: [ {
-    position: 10
-  } ]
-  @UI.selectionField: [ {
-    position: 10
-  } ]
-  Name;
-  @UI.identification: [ {
-      position: 10
-    } ]
-  @UI.lineItem: [ {
-    position: 10
-  } ]
-  @UI.selectionField: [ {
-    position: 10
-  } ]
-  Price;
-  @UI.identification: [ {
-      position: 10
-    } ]
-  @UI.lineItem: [ {
-    position: 10
-  } ]
-  @UI.selectionField: [ {
-    position: 10
-  } ]
-  Currency;
-  @UI.identification: [ {
-      position: 10
-    } ]
-  @UI.lineItem: [ {
-    position: 10
-  } ]
-  @UI.selectionField: [ {
-    position: 10
-  } ]
-  Type;
     @UI.identification: [ {
-      position: 10
-    } ]
+        position: 10
+      } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+    Name;
+    @UI.identification: [ {
+        position: 10
+      } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+    Description;
+    @UI.identification: [ {
+        position: 10
+      } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  Duration;
+    @UI.identification: [ {
+        position: 10
+      } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+    MaxNumber;
+   @UI.identification: [ {
+        position: 10
+      } ]
   @UI.lineItem: [ {
     position: 10
   } ]
@@ -68,16 +69,6 @@ annotate entity ZGYM_C_MEM_TYPE_ADMIN with
     position: 10
   } ]
   Tier;
-  @UI.identification: [ {
-      position: 10
-    } ]
-  @UI.lineItem: [ {
-    position: 10
-  } ]
-  @UI.selectionField: [ {
-    position: 10
-  } ]
-  Description;
   @UI.hidden : true
   Createdby;
   @UI.hidden : true
@@ -88,4 +79,5 @@ annotate entity ZGYM_C_MEM_TYPE_ADMIN with
   Lastchangedat;
   @UI.hidden : true
   Locallastchanged;
+  
 }

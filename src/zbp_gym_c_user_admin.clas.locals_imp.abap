@@ -1,0 +1,14 @@
+CLASS lhc_ZGYM_C_USER_ADMIN DEFINITION INHERITING FROM cl_abap_behavior_handler.
+  PRIVATE SECTION.
+
+    METHODS createMemType FOR MODIFY
+      IMPORTING keys FOR ACTION zgym_c_user_admin~createMemType.
+
+ENDCLASS.
+
+CLASS lhc_ZGYM_C_USER_ADMIN IMPLEMENTATION.
+
+  METHOD createMemType.
+  ENDMETHOD.
+
+ENDCLASS.

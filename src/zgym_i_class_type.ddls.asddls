@@ -15,6 +15,7 @@ define root view entity ZGYM_I_CLASS_TYPE
       description      as Description,
       duration         as Duration,
       max_number       as MaxNumber,
+      tier as Tier,
       createdby        as Createdby,
       createdat        as Createdat,
       lastchangedby    as Lastchangedby,

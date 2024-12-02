@@ -20,11 +20,13 @@ etag master LastChangedAt
   update;
   delete;
 
+
   field ( readonly:update ) Id, Ssn;
 
   validation validateRole on save { field Role; create; }
   validation validateCode on save { field CountryCode; create; }
   validation validateMail on save { field Email; create; }
+  validation validateDob on save { field Dob; create; }
 
 
   mapping for zgym_user
@@ -43,4 +45,6 @@ etag master LastChangedAt
       Lastchangedat    = lastchangedat;
       Locallastchanged = locallastchanged;
     }
+
+
 }

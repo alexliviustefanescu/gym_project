@@ -3,4 +3,5 @@
 define service ZGYM_UI_ADMIN {
   expose ZGYM_C_USER_ADMIN;
   expose ZGYM_C_MEM_TYPE_ADMIN;
+  expose ZGYM_C_CLASS_TYPE_ADMIN;
 }

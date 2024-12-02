@@ -1,0 +1,5 @@
+CLASS zbp_gym_c_user_admin DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zgym_c_user_admin.
+ENDCLASS.
+
+CLASS zbp_gym_c_user_admin IMPLEMENTATION.
+ENDCLASS.

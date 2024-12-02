@@ -29,7 +29,7 @@ provider contract transactional_query as projection on ZGYM_I_CLASS
   Lastchangedat,
   Locallastchanged,
   /* Associations */
-  _Classes,
+  _Classes.Tier as ClassTier,
   _Members,
   _Instructors
 }

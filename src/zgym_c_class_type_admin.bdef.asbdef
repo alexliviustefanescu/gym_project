@@ -2,7 +2,7 @@ projection;
 strict ( 2 );
 use draft;
 
-define behavior for ZGYM_C_USER_REC_1 alias _UserRec1
+define behavior for ZGYM_C_CLASS_TYPE_ADMIN //alias <alias_name>
 {
   use create;
   use update;
@@ -13,5 +13,4 @@ define behavior for ZGYM_C_USER_REC_1 alias _UserRec1
   use action Discard;
   use action Resume;
   use action Prepare;
-
 }

@@ -5,14 +5,10 @@
 define root view entity ZGYM_C_USER_REC_1
   provider contract transactional_query
   as projection on ZGYM_I_USER
-
+  association [1..*] to ZGYM_I_MEM as _Membership on $projection.Id = _Membership.UserId
 {
   key Id,
   key Ssn,
-      @Consumption.valueHelpDefinition: [{ entity: {
-              name: 'ZGYM_I_ROLES',
-              element: 'Role'
-              } }]
       Role,
       Name,
       Dob,
@@ -24,6 +20,6 @@ define root view entity ZGYM_C_USER_REC_1
       Lastchangedby,
       Lastchangedat,
       Locallastchanged,
-      
+
       _Membership
 }

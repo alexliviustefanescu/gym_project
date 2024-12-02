@@ -41,6 +41,17 @@ annotate entity ZGYM_C_CLASS_SUB with
   } ]
   @EndUserText.label: 'Member ID'
   MemberId;
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @EndUserText.label: 'ClassTier'
+  ClassTier;
   @UI.hidden: true
   Createdby;
   @UI.hidden: true

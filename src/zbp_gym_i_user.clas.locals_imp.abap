@@ -10,6 +10,8 @@ CLASS lhc_ZGYM_I_USER DEFINITION INHERITING FROM cl_abap_behavior_handler.
     METHODS fetchcodes.
     METHODS validatemail FOR VALIDATE ON SAVE
       IMPORTING keys FOR user~validatemail.
+    METHODS validatedob FOR VALIDATE ON SAVE
+      IMPORTING keys FOR user~validatedob.
 
 ENDCLASS.
 
@@ -100,6 +102,31 @@ CLASS lhc_ZGYM_I_USER IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD fetchcodes.
+  ENDMETHOD.
+
+  METHOD validateDob.
+
+    READ ENTITIES OF zgym_i_user IN LOCAL MODE
+     ENTITY User
+      FIELDS ( Dob ) WITH CORRESPONDING #( keys )
+   RESULT DATA(users).
+
+    LOOP AT users INTO DATA(user).
+      DATA(dob_string) = CONV string( user-Dob ).
+      DATA(year) = dob_string+0(4).
+
+      IF year < 1930 OR year > 2014.
+
+        APPEND VALUE #( %tky = user-%tky ) TO failed-user.
+
+        APPEND VALUE #( %tky = user-%tky %msg = new_message(
+                                 id       = 'ZGYM_MESSAGE_CLASS'
+                                 number   = 004
+                                 severity = if_abap_behv_message=>severity-error
+                               )
+                      ) TO reported-user.
+      ENDIF.
+    ENDLOOP.
   ENDMETHOD.
 
 ENDCLASS.

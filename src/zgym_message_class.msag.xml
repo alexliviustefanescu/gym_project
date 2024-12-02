@@ -26,6 +26,12 @@
      <MSGNR>003</MSGNR>
      <TEXT>Invalid email adress</TEXT>
     </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZGYM_MESSAGE_CLASS</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Invalid date of birth</TEXT>
+    </T100>
    </T100>
   </asx:values>
  </asx:abap>

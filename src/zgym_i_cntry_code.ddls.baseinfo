@@ -3,12 +3,10 @@
 {
 "FROM":
 [
-"ZGYM_I_USER"
+"ZGYM_CNTRY_CODE"
 ],
 "ASSOCIATED":
-[
-"ZGYM_I_MEM"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":
